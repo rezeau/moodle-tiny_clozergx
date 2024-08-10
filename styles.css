@@ -1,0 +1,60 @@
+.tiny_clozergx img {
+    cursor: pointer;
+}
+
+.tiny_clozergx .form-control {
+    width: unset;
+}
+
+.tiny_clozergx .error {
+    border-color: red;
+}
+
+.tiny_clozergx .msg-error {
+    color: red;
+}
+
+.tiny_clozergx_answers {
+    height: 375px;
+    overflow-x: hidden;
+}
+
+.tiny_clozergx_qtype {
+    overflow: auto;
+    position: relative;
+}
+
+.tiny_clozergx_qtype .tiny_clozergx_summary {
+    display: none;
+    left: 175px;
+    position: absolute;
+    top: 0;
+}
+
+.tiny_clozergx_qtype input[type="radio"]:focus {
+    box-shadow: none;
+}
+
+.tiny_clozergx_qtype input[type="radio"]:checked + label .tiny_clozergx_summary {
+    display: inline;
+}
+
+input.tiny_clozergx_marks.form-control {
+    width: 4em;
+}
+
+.tiny_clozergx_answers .form-group img {
+    margin-top: .5rem;
+}
+
+.tiny_clozergx_answers .form-group .icon_smallicon {
+    margin-right: 0.25rem;
+}
+
+.tiny_clozergx_answers li:first-child .tiny_clozergx_up {
+    display: none;
+}
+
+.tiny_clozergx_answers li:last-child .tiny_clozergx_down {
+    display: none;
+}
