@@ -18,13 +18,13 @@ Feature: Add interface to Cloze question type syntax
   Scenario: Create a Cloze question
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"
-    And I set the field "SHORTANSWER" to "1"
+    And I set the field "REGEXP" to "1"
     And I click on "Select question type" "button"
-    And I set the field "Answer" to "cat"
+    And I set the field "Answer" to "blue, white and red"
     And I set the field "Feedback" to " That is correct"
     And I click on "Insert question" "button"
     And I click on "Save changes" "button"

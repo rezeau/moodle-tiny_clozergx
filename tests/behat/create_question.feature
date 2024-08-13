@@ -18,7 +18,7 @@ Feature: Test the cloze question editor string compilation after creating the qu
   Scenario: Create a MULTICHOICE_H question with 3 answers
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"
@@ -44,7 +44,7 @@ Feature: Test the cloze question editor string compilation after creating the qu
   Scenario: Create a MULTICHOICE_H question with 4 answers and percent grades
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"
@@ -71,7 +71,7 @@ Feature: Test the cloze question editor string compilation after creating the qu
   Scenario: Create a MULTICHOICE_V question with 3 answers and custom percent grades
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"
@@ -93,10 +93,10 @@ Feature: Test the cloze question editor string compilation after creating the qu
     <p><span class="cloze-question-marker" contenteditable="false">{1:MULTICHOICE_V:%0%cat~%-22%dog~%100%mouse}</span></p>
     """
 
-  Scenario: Create a MULTICHOICE_HS question with 3 answers and changing order
+  Scenario: Create a MULTICHOICE_HS question with 3 answers and changing order    
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"
@@ -120,7 +120,7 @@ Feature: Test the cloze question editor string compilation after creating the qu
   Scenario: Create a MULTIRESPONSE_S question with 3 answers and deleting an answer
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"
@@ -143,7 +143,7 @@ Feature: Test the cloze question editor string compilation after creating the qu
   Scenario: Create a NUMERICAL question with 4 answers and tolerances
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"
@@ -174,7 +174,7 @@ Feature: Test the cloze question editor string compilation after creating the qu
   Scenario: Create a SHORTANSWER question with 2 correct answers
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"

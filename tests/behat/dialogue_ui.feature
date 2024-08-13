@@ -18,7 +18,7 @@ Feature: Test basic ui features of the dialogue window
   Scenario: Test changes of question description
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"
@@ -28,6 +28,14 @@ Feature: Test basic ui features of the dialogue window
 
     When I set the field "SHORTANSWER_C" to "1"
     Then I should see "Allows a response of one or a few words that is graded by comparing against various model answers, which may contain wildcards."
+    And I should see "Yes, case must match"
+
+    When I set the field "REGEXP" to "1"
+    Then I should see "Like short answer but the analysis of the student's responses is based on regular expressions"
+    And I should see "No, case is unimportant"
+
+    When I set the field "REGEXP_C" to "1"
+    Then I should see "Like short answer but the analysis of the student's responses is based on regular expressions"
     And I should see "Yes, case must match"
 
     When I set the field "MULTIRESPONSE_S" to "1"
@@ -44,4 +52,5 @@ Feature: Test basic ui features of the dialogue window
     When I click on "Select question type" "button"
     Then I should see "Multiple choice - single response (MULTICHOICE_H)"
 
-    And I click on "Cancel" "button" in the "Cloze question editor" "dialogue"
+    And I click on "Cancel" "button" in the "Cloze question editor with regexp questions" "dialogue"
+    And I log out

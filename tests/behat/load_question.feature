@@ -18,7 +18,7 @@ Feature: Test the cloze question editor string parser that a selected question s
   Scenario: Load MC question string with feedback
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I set the field "Question text" to multiline:
@@ -38,7 +38,7 @@ Feature: Test the cloze question editor string parser that a selected question s
   Scenario: Load MULTIRESPONSE question with custom percentages
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I set the field "Question text" to multiline:
@@ -60,7 +60,7 @@ Feature: Test the cloze question editor string parser that a selected question s
   Scenario: Load SHORTANSWER question with two correct answers
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I set the field "Question text" to multiline:
@@ -75,5 +75,26 @@ Feature: Test the cloze question editor string parser that a selected question s
     And the field with xpath "//form[@name='tiny_clozergx_form']//li[1]//select[contains(@class, 'tiny_clozergx_frac')]" matches value "Correct"
     And the field with xpath "//form[@name='tiny_clozergx_form']//li[1]//input[contains(@class, 'tiny_clozergx_feedback')]" matches value ""
     And the field with xpath "//form[@name='tiny_clozergx_form']//li[2]//input[contains(@class, 'tiny_clozergx_answer')]" matches value "Bill"
+    And the field with xpath "//form[@name='tiny_clozergx_form']//li[2]//select[contains(@class, 'tiny_clozergx_frac')]" matches value "Correct"
+    And the field with xpath "//form[@name='tiny_clozergx_form']//li[2]//input[contains(@class, 'tiny_clozergx_feedback')]" matches value "This is the short form but correct"
+
+    Scenario: Load REGEXP question with two correct answers
+    When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
+    And I press "Create a new question ..."
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
+    And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
+    And I set the field "Question name" to "multianswer-001"
+    And I set the field "Question text" to multiline:
+    """
+    <p><span class="cloze-question-marker" contenteditable="false">{3:REGEXP:=It's blue, white and red.~=blue, white, red#This is the short form but correct}</span></p>
+    """
+    And I select the "span" element in position "0" of the "Question text" TinyMCE editor
+    When I click on "Cloze question editor" "button"
+    Then I should see "Regular expression short answer (REGEXP)"
+    And the field "Default mark" matches value "3"
+    And the field with xpath "//form[@name='tiny_clozergx_form']//li[1]//input[contains(@class, 'tiny_clozergx_answer')]" matches value "It's blue, white and red."
+    And the field with xpath "//form[@name='tiny_clozergx_form']//li[1]//select[contains(@class, 'tiny_clozergx_frac')]" matches value "Correct"
+    And the field with xpath "//form[@name='tiny_clozergx_form']//li[1]//input[contains(@class, 'tiny_clozergx_feedback')]" matches value ""
+    And the field with xpath "//form[@name='tiny_clozergx_form']//li[2]//input[contains(@class, 'tiny_clozergx_answer')]" matches value "blue, white, red"
     And the field with xpath "//form[@name='tiny_clozergx_form']//li[2]//select[contains(@class, 'tiny_clozergx_frac')]" matches value "Correct"
     And the field with xpath "//form[@name='tiny_clozergx_form']//li[2]//input[contains(@class, 'tiny_clozergx_feedback')]" matches value "This is the short form but correct"

@@ -18,7 +18,7 @@ Feature: Test the cloze question dialgoue with error messages when not all field
   Scenario: Create a MULTICHOICE_VS question with errors
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"
@@ -49,7 +49,7 @@ Feature: Test the cloze question dialgoue with error messages when not all field
   Scenario: Create a NUMERICAL question with errors
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"
@@ -80,7 +80,7 @@ Feature: Test the cloze question dialgoue with error messages when not all field
   Scenario: Create a MULTIRESPONSE question with errors
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
-    And I set the field "Embedded answers (Cloze)" to "1"
+    And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
     And I click on "Add" "button" in the "Choose a question type to add" "dialogue"
     And I set the field "Question name" to "multianswer-001"
     And I click on "Cloze question editor" "button"
