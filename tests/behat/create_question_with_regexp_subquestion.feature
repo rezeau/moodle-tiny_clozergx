@@ -64,4 +64,3 @@ Feature: Test the cloze question editor string compilation after creating the qu
     """
     Then I press "id_analyzequestion"
     And I should see "Answer 1 must be a correct answer (grade = 100%) and it will not be analysed as a regular expression."
-

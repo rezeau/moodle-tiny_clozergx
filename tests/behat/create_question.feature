@@ -93,7 +93,7 @@ Feature: Test the cloze question editor string compilation after creating the qu
     <p><span class="cloze-question-marker" contenteditable="false">{1:MULTICHOICE_V:%0%cat~%-22%dog~%100%mouse}</span></p>
     """
 
-  Scenario: Create a MULTICHOICE_HS question with 3 answers and changing order    
+  Scenario: Create a MULTICHOICE_HS question with 3 answers and changing order
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
     And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"
