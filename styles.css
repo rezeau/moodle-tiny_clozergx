@@ -1,11 +1,12 @@
 @media (min-width: 992px) {
-  .tiny_clozergx .form-control {    
-    width: 500px!important;
-  }
-  .tiny_clozergx_col0 form-group {
-    width: 550px!important;
-  }
+    .tiny_clozergx .form-control {
+        width: 500px !important;
+    }
+    .tiny_clozergx_col0 .form-group {
+        width: 550px !important;
+    }
 }
+
 .tiny_clozergx img {
     cursor: pointer;
 }
@@ -48,7 +49,7 @@
 }
 
 input.tiny_clozergx_marks.form-control {
-    width: 4em!important;
+    width: 4em !important;
 }
 
 .tiny_clozergx_answers .form-group img {
