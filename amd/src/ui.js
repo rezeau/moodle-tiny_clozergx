@@ -776,7 +776,6 @@ const _choiceHandler = function(e) {
  */
 const _parseSubquestion = function(question) {
   _answerdata = []; // Flush answers to have an empty dialogue if something goes wrong parsing the question string.
-  //console.log(question);
   const parts = reQtype.exec(question);
   reQtype.lastIndex = 0; // Reset lastIndex so that the next match starts from the beginning of the question string.
   if (!parts) {

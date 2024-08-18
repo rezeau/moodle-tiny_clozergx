@@ -1,5 +1,5 @@
 @editor @tiny @tiny_clozergx @javascript
-Feature: Test basic ui features of the dialogue window
+Feature: Test basic ui features of the dialogue window in clozergx
 
   Background:
     Given the following "users" exist:

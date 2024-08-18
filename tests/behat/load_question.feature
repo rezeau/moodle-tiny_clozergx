@@ -1,5 +1,5 @@
 @editor @tiny @editor_tiny @tiny_html @tiny_clozergx @javascript
-Feature: Test the cloze question editor string parser that a selected question string loads correctly into the dialogue.
+Feature: Test the clozergx question editor string parser that a selected question string loads correctly into the dialogue.
 
   Background:
     Given the following "users" exist:
@@ -78,7 +78,7 @@ Feature: Test the cloze question editor string parser that a selected question s
     And the field with xpath "//form[@name='tiny_clozergx_form']//li[2]//select[contains(@class, 'tiny_clozergx_frac')]" matches value "Correct"
     And the field with xpath "//form[@name='tiny_clozergx_form']//li[2]//input[contains(@class, 'tiny_clozergx_feedback')]" matches value "This is the short form but correct"
 
-    Scenario: Load REGEXP question with two correct answers
+  Scenario: Load REGEXP question with two correct answers
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
     And I press "Create a new question ..."
     And I set the field "Embedded answers with REGEXP (Clozergx)" to "1"

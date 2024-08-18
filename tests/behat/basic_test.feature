@@ -1,5 +1,5 @@
 @editor @tiny @tiny_clozergx @javascript
-Feature: Add interface to Cloze question type syntax
+Feature: Add interface to Clozergx question type syntax
 
   Background:
     Given the following "users" exist:

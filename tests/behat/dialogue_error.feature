@@ -1,5 +1,5 @@
 @editor @tiny @editor_tiny @tiny_html @tiny_clozergx @javascript
-Feature: Test the cloze question dialgoue with error messages when not all fields are filled correctly.
+Feature: Test the clozergx question dialgoue with error messages when not all fields are filled correctly.
 
   Background:
     Given the following "users" exist:
@@ -38,13 +38,8 @@ Feature: Test the cloze question dialgoue with error messages when not all field
     And I set the field with xpath "//form[@name='tiny_clozergx_form']//li[2]//input[contains(@class, 'tiny_clozergx_answer')]" to "cat"
     And I set the field with xpath "//form[@name='tiny_clozergx_form']//li[3]//input[contains(@class, 'tiny_clozergx_answer')]" to "mouse"
     And I click on "Insert question" "button"
-    #And I click on the "View > Source code" menu item for the "Question text" TinyMCE editor
-    #Then I should see "<p>{1:MULTICHOICE_VS:=dog~cat~mouse}</p>" source code for the "Question text" TinyMCE editor
-    And I click on "Save changes and continue editing" "button"
-    Then the field "Question text" matches multiline:
-    """
-    <p><span class="cloze-question-marker" contenteditable="false">{1:MULTICHOICE_VS:=dog~cat~mouse}</span></p>
-    """
+    And I click on the "View > Source code" menu item for the "Question text" TinyMCE editor
+    Then I should see "<p>{1:MULTICHOICE_VS:=dog~cat~mouse}</p>" source code for the "Question text" TinyMCE editor
 
   Scenario: Create a NUMERICAL question with errors
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher
@@ -69,13 +64,8 @@ Feature: Test the cloze question dialgoue with error messages when not all field
 
     When I set the field with xpath "//form[@name='tiny_clozergx_form']//li[1]//input[contains(@class, 'tiny_clozergx_tolerance')]" to "0"
     And I click on "Insert question" "button"
-    #And I click on the "View > Source code" menu item for the "Question text" TinyMCE editor
-    #Then I should see "<p>{1:NUMERICAL:=0.45:0}</p>" source code for the "Question text" TinyMCE editor
-    And I click on "Save changes and continue editing" "button"
-    Then the field "Question text" matches multiline:
-    """
-    <p><span class="cloze-question-marker" contenteditable="false">{1:NUMERICAL:=0.45:0}</span></p>
-    """
+    And I click on the "View > Source code" menu item for the "Question text" TinyMCE editor
+    Then I should see "<p>{1:NUMERICAL:=0.45:0}</p>" source code for the "Question text" TinyMCE editor
 
   Scenario: Create a MULTIRESPONSE question with errors
     When I am on the "Course 1" "core_question > course question bank" page logged in as teacher

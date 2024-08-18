@@ -17,7 +17,7 @@
 /**
  * Strings for component 'tiny_cloze', language 'fr', version '4.4'.
  *
- * @package     tiny_cloze
+ * @package     tiny_clozergx
  * @category    string
  * @copyright   1999 Martin Dougiamas and contributors
  * @license     https://www.gnu.org/copyleft/gpl.html GNU GPL v3 or later
