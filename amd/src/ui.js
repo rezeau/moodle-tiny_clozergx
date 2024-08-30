@@ -103,92 +103,92 @@ const CSS = {
   TYPE: 'tiny_clozergx_qtype'
 };
 const TEMPLATE = {
-    FORM: '<div class="tiny_clozergx">' +
-      '<p>{{name}} ({{qtype}})</p>' +
-      '<form name="tiny_clozergx_form">' +
-      '<div class="row ml-0">' +
-      '<div class="form-group">' +
-      '<label for="{{elementid}}_mark">{{STR.defaultmark}}</label>' +
-      '<input id="{{elementid}}_mark" type="text" value="{{marks}}" ' +
-      'class="{{CSS.MARKS}} form-control d-inline mx-1" />' +
-      '<a class="{{CSS.ADD}}" title="{{STR.addmoreanswerblanks}}">' +
-      '<img class="icon_smallicon" src="' +
-      M.util.image_url('t/add', 'core') + '" alt="{{STR.addmoreanswerblanks}}"></a>' +
-      '</div>' +
-      '<div class="msg-error hidden"></div>' +
-      '</div>' +
-      '<div class="{{CSS.ANSWERS}} mb-3">' +
-      '<ol class="pl-3">{{#answerdata}}' +
-      '<li class="mt-3"><div class="row ml-0">' +
-      '<div class="{{CSS.LEFT}} form-group">' +
-      '<label for="{{id}}_answer">{{STR.answer}}</label>' +
-      '<input id="{{id}}_answer" type="text" value="{{answer}}" ' +
-      'class="{{CSS.ANSWER}} form-control d-inline mx-2" />' +
-      '</div>' +
-      '<div class="{{CSS.LEFT}} form-group">' +
-      '<a class="{{CSS.ADD}}" title="{{STR.addmoreanswerblanks}}">' +
-      '<img class="icon_smallicon" src="' +
-      M.util.image_url('t/add', 'core') + '" alt="{{STR.addmoreanswerblanks}}"></a>' +
-      '<a class="{{CSS.DELETE}}" title="{{STR.delete}}">' +
-      '<img class="icon_smallicon" src="' +
-      M.util.image_url('t/delete', 'core') + '" alt="{{STR.delete}}"></a>' +
-      '<a class="{{CSS.RAISE}}" title="{{STR.up}}">' +
-      '<img class="icon_smallicon" src="' +
-      M.util.image_url('t/up', 'core') + '" alt="{{STR.up}}"></a>' +
-      '<a class="{{CSS.LOWER}}" title="{{STR.down}}">' +
-      '<img class="icon_smallicon" src="' +
-      M.util.image_url('t/down', 'core') + '" alt="{{STR.down}}"></a>' +
-      '</div>' +
-      '</div>' +
-      '{{#numerical}}' +
-      '<div class="row">' +
-      '<div class="{{CSS.RIGHT}} form-group">' +
-      '<label for="{{id}}_tolerance">{{{STR.tolerance}}}</label>' +
-      '<input id="{{id}}_tolerance" type="text" value="{{tolerance}}" ' +
-      'class="{{CSS.TOLERANCE}} form-control d-inline mx-2" />' +
-      '</div>' +
-      '</div>' +
-      '{{/numerical}}' +
-      '<div class="row">' +
-      '<div class="{{CSS.RIGHT}} form-group">' +
-      '<label for="{{id}}_feedback">{{STR.feedback}}</label>' +
-      '<input id="{{id}}_feedback" type="text" value="{{feedback}}" ' +
-      'class="{{CSS.FEEDBACK}} form-control d-inline mx-2" />' +
-      '</div>' +
-      '<div class="{{CSS.RIGHT}} form-group">' +
-      '<label id="{{id}}_grade">{{STR.grade}}</label>' +
-      '<select id="{{id}}_grade" class="{{CSS.FRACTION}} custom-select mx-2">' +
-      '{{{fractionOptions}}}' +
-      '</select>' +
-      '</div>' +
-      '<div class="{{CSS.RIGHT}} form-group{{^isCustomGrade}} hidden{{/isCustomGrade}}">' +
-      '<input id="{{id}}_grade_custom" type="text"{{#isCustomGrade}} value="{{fraction}}"{{/isCustomGrade}} ' +
-      'class="{{CSS.FRAC_CUSTOM}} form-control d-inline mx-2" style="width: 4rem;" />%' +
-      '</div>' +
-      '</div></li>' +
-      '{{/answerdata}}</ol></div>' +
-      '</form>' +
-      '</div>',
-    TYPE: '<div class="tiny_clozergx mt-0 mx-2 mb-2">' +
-      '<p>{{STR.chooseqtypetoadd}}</p>' +
-      '<form name="tiny_clozergx_form">' +
-      '<div class="{{CSS.TYPE}} form-check">' +
-      '{{#types}}' +
-      '<div class="option">' +
-      '<input name="qtype" id="qtype_qtype_{{type}}" value="{{type}}" type="radio" class="form-check-input">' +
-      '<label for="qtype_qtype_{{type}}">' +
-      '<span class="typename">{{type}}</span>' +
-      '<span class="{{CSS.SUMMARY}}"><h6>{{name}}</h6><p>{{summary}}</p>' +
-      '<ul>{{#options}}' +
-      '<li>{{.}}</li>' +
-      '{{/options}}</ul>' +
-      '</span>' +
-      '</label></div>' +
-      '{{/types}}</div>' +
-      '</form></div>',
-    FOOTER: '<button type="button" class="btn btn-secondary" data-action="cancel">{{cancel}}</button>' +
-      '<button type="button" class="btn btn-primary" data-action="save">{{submit}}</button>',
-  };
+  FORM: '<div class="tiny_cloze">' +
+    '<p>{{name}} ({{qtype}})</p>' +
+    '<form name="tiny_cloze_form">' +
+    '<div class="row ml-0">' +
+    '<div class="form-group">' +
+    '<label for="{{elementid}}_mark">{{STR.defaultmark}}</label>' +
+    '<input id="{{elementid}}_mark" type="text" value="{{marks}}" ' +
+    'class="{{CSS.MARKS}} form-control d-inline mx-1" />' +
+    '<a class="{{CSS.ADD}}" title="{{STR.addmoreanswerblanks}}">' +
+    '<img class="icon_smallicon" src="' +
+    M.util.image_url('t/add', 'core') + '" alt="{{STR.addmoreanswerblanks}}"></a>' +
+    '</div>' +
+    '<div class="msg-error hidden"></div>' +
+    '</div>' +
+    '<div class="{{CSS.ANSWERS}} mb-3">' +
+    '<ol class="pl-3">{{#answerdata}}' +
+    '<li class="mt-3"><div class="row ml-0">' +
+    '<div class="{{CSS.LEFT}} form-group">' +
+    '<label for="{{id}}_answer">{{STR.answer}}</label>' +
+    '<input id="{{id}}_answer" type="text" value="{{answer}}" ' +
+    'class="{{CSS.ANSWER}} form-control d-inline mx-2" />' +
+    '</div>' +
+    '<div class="{{CSS.LEFT}} form-group">' +
+    '<a class="{{CSS.ADD}}" title="{{STR.addmoreanswerblanks}}">' +
+    '<img class="icon_smallicon" src="' +
+    M.util.image_url('t/add', 'core') + '" alt="{{STR.addmoreanswerblanks}}"></a>' +
+    '<a class="{{CSS.DELETE}}" title="{{STR.delete}}">' +
+    '<img class="icon_smallicon" src="' +
+    M.util.image_url('t/delete', 'core') + '" alt="{{STR.delete}}"></a>' +
+    '<a class="{{CSS.RAISE}}" title="{{STR.up}}">' +
+    '<img class="icon_smallicon" src="' +
+    M.util.image_url('t/up', 'core') + '" alt="{{STR.up}}"></a>' +
+    '<a class="{{CSS.LOWER}}" title="{{STR.down}}">' +
+    '<img class="icon_smallicon" src="' +
+    M.util.image_url('t/down', 'core') + '" alt="{{STR.down}}"></a>' +
+    '</div>' +
+    '</div>' +
+    '{{#numerical}}' +
+    '<div class="row">' +
+    '<div class="{{CSS.RIGHT}} form-group">' +
+    '<label for="{{id}}_tolerance">{{{STR.tolerance}}}</label>' +
+    '<input id="{{id}}_tolerance" type="text" value="{{tolerance}}" ' +
+    'class="{{CSS.TOLERANCE}} form-control d-inline mx-2" />' +
+    '</div>' +
+    '</div>' +
+    '{{/numerical}}' +
+    '<div class="row">' +
+    '<div class="{{CSS.RIGHT}} form-group">' +
+    '<label for="{{id}}_feedback">{{STR.feedback}}</label>' +
+    '<input id="{{id}}_feedback" type="text" value="{{feedback}}" ' +
+    'class="{{CSS.FEEDBACK}} form-control d-inline mx-2" />' +
+    '</div>' +
+    '<div class="{{CSS.RIGHT}} form-group">' +
+    '<label id="{{id}}_grade">{{STR.grade}}</label>' +
+    '<select id="{{id}}_grade" class="{{CSS.FRACTION}} custom-select mx-2">' +
+    '{{{fractionOptions}}}' +
+    '</select>' +
+    '</div>' +
+    '<div class="{{CSS.RIGHT}} form-group{{^isCustomGrade}} hidden{{/isCustomGrade}}">' +
+    '<input id="{{id}}_grade_custom" type="text"{{#isCustomGrade}} value="{{fraction}}"{{/isCustomGrade}} ' +
+    'class="{{CSS.FRAC_CUSTOM}} form-control d-inline mx-2" style="width: 4rem;" />%' +
+    '</div>' +
+    '</div></li>' +
+    '{{/answerdata}}</ol></div>' +
+    '</form>' +
+    '</div>',
+  TYPE: '<div class="tiny_cloze mt-0 mx-2 mb-2">' +
+    '<p>{{STR.chooseqtypetoadd}}</p>' +
+    '<form name="tiny_cloze_form">' +
+    '<div class="{{CSS.TYPE}} form-check">' +
+    '{{#types}}' +
+    '<div class="option">' +
+    '<input name="qtype" id="qtype_qtype_{{type}}" value="{{type}}" type="radio" class="form-check-input">' +
+    '<label for="qtype_qtype_{{type}}">' +
+    '<span class="typename">{{type}}</span>' +
+    '<span class="{{CSS.SUMMARY}}"><h6>{{name}}</h6><p>{{summary}}</p>' +
+    '<ul>{{#options}}' +
+    '<li>{{.}}</li>' +
+    '{{/options}}</ul>' +
+    '</span>' +
+    '</label></div>' +
+    '{{/types}}</div>' +
+    '</form></div>',
+  FOOTER: '<button type="button" class="btn btn-secondary" data-action="cancel">{{cancel}}</button>' +
+    '<button type="button" class="btn btn-primary" data-action="save">{{submit}}</button>',
+};
   const FRACTIONS = [
     {value: 100},
     {value: 50},
@@ -403,7 +403,7 @@ const getQuestionTypes = function() {
 /**
  * The editor instance that is injected via the onInit() function.
  *
- * @type tinymce.Editor
+ * @type {tinymce.Editor}
  * @private
  */
 let _editor = null;
@@ -412,7 +412,7 @@ let _editor = null;
  * A reference to the currently open form.
  *
  * @param _form
- * @type Node
+ * @type {Node}
  * @private
  */
 let _form = null;
@@ -421,7 +421,7 @@ let _form = null;
  * An array containing the current answers options
  *
  * @param _answerdata
- * @type Array
+ * @type {Array}
  * @private
  */
 let _answerdata = [];
@@ -430,7 +430,7 @@ let _answerdata = [];
  * The sub question type to be edited
  *
  * @param _qtype
- * @type String
+ * @type {string|null}
  * @private
  */
 let _qtype = null;
@@ -446,16 +446,22 @@ let _selectedOffset = -1;
  * The maximum marks for the sub question
  *
  * @param _marks
- * @type Integer
+ * @type {Integer}
  * @private
  */
 let _marks = 1;
 
 /**
  * The modal dialogue to be displayed when designing the cloze question types.
- * @type Modal|null
+ * @type {Modal|null}
  */
 let _modal = null;
+
+/**
+ * If its a normal selection of text, use it for the first answer field.
+ * @type {string|null}
+ */
+let _firstAnswer = null;
 
 /**
  * Inject the editor instance and add markers to the cloze question texts.
@@ -504,12 +510,14 @@ const displayDialogue = async function() {
   // Resolve whether cursor is in a subquestion.
   var subquestion = resolveSubquestion();
   if (subquestion) {
+    _firstAnswer = null;
     // Subquestion found, remember which node of the marker nodes is selected.
     _selectedOffset = indexOfNode(_editor.dom.select('.' + markerClass), subquestion);
     _parseSubquestion(subquestion.innerHTML);
     _setDialogueContent(_qtype);
   } else {
     // No subquestion found, no offset to remember.
+    _firstAnswer = _editor.selection.getContent();
     _selectedOffset = -1;
     _setDialogueContent();
   }
@@ -742,19 +750,27 @@ const _choiceHandler = function(e) {
   if (qtype) {
     _qtype = qtype.value;
   }
-  const max = (_qtype.indexOf('SHORTANSWER') !== -1 || _qtype.indexOf('REGEXP') !== -1 || _qtype === 'NUMERICAL') ? 1 : 3;
+  // For numerical and short answer and regexp questions we offer one response field only. All other
+  // question types have three empty response fields.
+  const max = (_qtype.indexOf('SHORTANSWER') !== -1 ||_qtype.indexOf('REGEXP') !== -1 || _qtype === 'NUMERICAL') ? 1 : 3;
   const blankAnswer = {
     id: getUuid(),
     answer: '',
     feedback: '',
     fraction: 100,
-    fractionOptions: getFractionOptions(max === 1 ? '=' : ''),
+    fractionOptions: getFractionOptions(''),
     tolerance: 0,
     isCustomGrade: false,
   };
   _answerdata = [];
   for (let x = 0; x < max; x++) {
     _answerdata.push({...blankAnswer, id: getUuid()});
+  }
+  // The first response field gets the default grade correct.
+  _answerdata[0].fractionOptions = getFractionOptions('=');
+  // In case the user seleced some text, this is used as the first answer.
+  if (_firstAnswer) {
+    _answerdata[0].answer = _firstAnswer;
   }
   _modal.destroy();
   // Our choice is stored in _qtype. We need to create the modal dialogue with the form now.
@@ -991,7 +1007,7 @@ const _setSubquestion = function(e) {
 
 /**
  * Read the form data, process it and store the result in the internal  _answerdata array.
- * Also, is validation is enabled, the custom_grade field is in use and does not contain
+ * Also, if validation is enabled, the custom_grade field is in use and does not contain
  * a number, then the field is marked as an error and the return value is false.
  *
  * @method _processFormData
@@ -1014,6 +1030,7 @@ const _processFormData = function(validate) {
     answers.item(i).classList.remove('error');
     customGrades.item(i).classList.remove('error');
     answer = answers.item(i).value;
+    // For numerical questions we need to check if the answer and tolerance is a number.
     if (_qtype === 'NM' || _qtype === 'NUMERICAL') {
       answer = Number(answer);
       tolerance = Number(tolerances.item(i).value);
@@ -1039,6 +1056,7 @@ const _processFormData = function(validate) {
       isCustomGrade: fractions.item(i).value === selectCustomPercent
     };
     if (validate) {
+      // When custom grades are used, the value must be a number between -100 and 100 (percent).
       if (currentAnswer.isCustomGrade &&
         (isNaN(currentAnswer.fraction) || currentAnswer.fraction < -100 || currentAnswer.fraction > 100
           || currentAnswer.fraction.trim() === '')
@@ -1046,19 +1064,59 @@ const _processFormData = function(validate) {
         hasErrors.push(STR.err_custom_rate);
         customGrades.item(i).classList.add('error');
       }
-      // Check for non-empty value in the original input.
-      if (answers.item(i).value.trim() === '') {
-        answers.item(i).classList.add('error');
-        hasErrors.push(STR.err_empty_answer);
-      }
-      if (currentAnswer.fraction === '100' || currentAnswer.fraction === '=') {
+      // We found a correct answer, when grade is marked as 100 or "=" and the answer is not empty.
+      if ((currentAnswer.fraction === '100' || currentAnswer.fraction === '=') && answers.item(i).value.trim() !== '') {
         foundCorrect = true;
       }
     }
     _answerdata.push(currentAnswer);
     _marks = _form.querySelector('.' + CSS.MARKS).value;
   }
-  if (validate && !foundCorrect) {
+  if (!validate) {
+    return hasErrors;
+  }
+  return hasErrors.concat(_applyErrorsOnAnswers(answers, foundCorrect));
+};
+
+/**
+ * Iterate over all answer data, check for empty answers and incorrect grades. Apply the
+ * error class to the appropriate fields and return an array with error messages that are
+ * displayed on top of the response fiels.
+ * If there are correct answers, then eliminate all empty answers.
+ *
+ * @method _applyErrorsOnAnswers
+ * @param {NodeList} answers
+ * @param {Boolean} foundCorrectAnswer
+ * @return {Array}
+ * @private
+ */
+const _applyErrorsOnAnswers = function(answers, foundCorrectAnswer) {
+  if (foundCorrectAnswer) {
+    for (let i = 0; i < _answerdata.length; i++) {
+      if (answers.item(i).value.trim() === '') {
+        _answerdata.splice(i, 1);
+      }
+    }
+    return [];
+  }
+  let hasErrors = [];
+  let focusFirst = false;
+  let noneCorrect = true; // The grade has a value that marks the answer as not correct.
+  for (let i = 0; i < answers.length; i++) {
+    // Check for non-empty value in the original input and mark them with an error.
+    if (answers.item(i).value.trim() === '') {
+      answers.item(i).classList.add('error');
+      if (!focusFirst) {
+        hasErrors.push(STR.err_empty_answer);
+        answers.item(i).focus();
+        focusFirst = true;
+      }
+    }
+    if (_answerdata[i].fraction === '100' || _answerdata[i].fraction === '=') {
+      noneCorrect = false;
+    }
+  }
+  if (noneCorrect) {
     hasErrors.push(STR.err_none_correct);
   }
   return hasErrors;
