@@ -103,9 +103,9 @@ const CSS = {
   TYPE: 'tiny_clozergx_qtype'
 };
 const TEMPLATE = {
-  FORM: '<div class="tiny_cloze">' +
+  FORM: '<div class="tiny_clozergx">' +
     '<p>{{name}} ({{qtype}})</p>' +
-    '<form name="tiny_cloze_form">' +
+    '<form name="tiny_clozergx_form">' +
     '<div class="row ml-0">' +
     '<div class="form-group">' +
     '<label for="{{elementid}}_mark">{{STR.defaultmark}}</label>' +
@@ -169,9 +169,9 @@ const TEMPLATE = {
     '{{/answerdata}}</ol></div>' +
     '</form>' +
     '</div>',
-  TYPE: '<div class="tiny_cloze mt-0 mx-2 mb-2">' +
+  TYPE: '<div class="tiny_clozergx mt-0 mx-2 mb-2">' +
     '<p>{{STR.chooseqtypetoadd}}</p>' +
-    '<form name="tiny_cloze_form">' +
+    '<form name="tiny_clozergx_form">' +
     '<div class="{{CSS.TYPE}} form-check">' +
     '{{#types}}' +
     '<div class="option">' +
